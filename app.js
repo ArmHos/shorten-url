@@ -23,7 +23,7 @@ app.post("/data", (req, res) => {
       id: generateID(),
       url,
     };
-    newUrl.updatedURL = `http://localhost:3000/${newUrl.id}`;
+    newUrl.updatedURL = `http://localhost:${PORT}/${newUrl.id}`;
     newUrl.faviconLinkPNG = faviconLink(url);
     newUrl.QR = generateQR(url);
     let { updatedURL, faviconLinkPNG, QR } = newUrl;
